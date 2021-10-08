@@ -11,8 +11,7 @@
       },
       {
         "title": "Create a support bundle",
-        "text": "step2.md",
-        "code": "bundle.yaml"
+        "text": "step2.md"
       },
       {
         "title": "Debug an Application",

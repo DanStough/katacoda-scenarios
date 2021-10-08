@@ -10,9 +10,9 @@ metadata:
 spec:
   collectors: []
   analyzers: []
-```
+```{{copy}}
 
-Save this as in the editor as `support.yaml`.
+Save this as in the editor as `support.yaml`{{open}}.
 
 Now get that bundle!
 `kubectl support-bundle support.yaml`{{execute}}
