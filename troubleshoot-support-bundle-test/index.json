@@ -6,15 +6,15 @@
   "details": {
     "steps": [
       {
-        "title": "Install `support-bundle`",
+        "title": "Setup",
         "text": "step1.md"
       },
       {
-        "title": "Create a support bundle (easy)",
+        "title": "Create a support bundle (basic)",
         "text": "step2.md"
       },
       {
-        "title": "Create a support bundle (hard)",
+        "title": "Create a support bundle (advanced)",
         "text": "step3.md"
       },
       {
