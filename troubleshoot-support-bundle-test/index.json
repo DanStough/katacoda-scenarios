@@ -10,15 +10,16 @@
         "text": "step1.md"
       },
       {
-        "title": "Create a support bundle (basic)",
-        "text": "step2.md"
+        "title": "Create a support bundle",
+        "text": "step2.md",
+        "code": "bundle.yaml"
       },
       {
-        "title": "Create a support bundle (advanced)",
+        "title": "Debug an Application",
         "text": "step3.md"
       },
       {
-        "title": "Define a Desired Outcome with an Analyzer",
+        "title": "Quick Troubleshooting with Analyzers",
         "text": "step4.md"
       }
     ],

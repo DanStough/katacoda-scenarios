@@ -1,4 +1,4 @@
-# Start our kubernetes cluster
+# Start our Kubernetes cluster
 
 To start the cluster in this scenario, run `launch.sh`{{execute}}.
 
@@ -6,7 +6,7 @@ To start the cluster in this scenario, run `launch.sh`{{execute}}.
 
 The easiest way to [install](https://troubleshoot.sh/docs/#installation) `support-bundle` is use [krew](https://krew.dev/), the kubectl plugin manager. The following script will run the krew installer and put it on the `$PATH`.
 
-`bash /root/krew.sh`{{execute}}
+`. krew.sh`{{execute}}
 
 With `krew` installed, the install is as easy as: `kubectl krew install support-bundle`{{execute}}
 

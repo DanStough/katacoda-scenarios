@@ -19,6 +19,6 @@
 # step 2 - add path to BASH
 echo "export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"" >> $HOME/.bashrc
 # step 3 - profit
-sleep 10
+sleep 3
 source /root/.bashrc
 echo "Installation is complete. You are now ready to begin using krew."
