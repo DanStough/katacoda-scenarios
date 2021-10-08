@@ -12,7 +12,7 @@ spec:
   analyzers: []
 </pre>
 
-Save this as in the IDE Tab.
+Save this in the IDE Tab.
 
 Now get that bundle!
 `kubectl support-bundle support.yaml`{{execute}}
