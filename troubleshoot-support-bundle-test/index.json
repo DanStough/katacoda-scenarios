@@ -1,21 +1,25 @@
 {
-  "title": "support bundle test",
-  "description": "Blurg",
+  "title": "",
+  "description": "How to collect diagnostic information and incites from failed kubernetes clusters and applications",
   "difficulty": "Beginner",
   "time": "30",
   "details": {
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Install `support-bundle`",
         "text": "step1.md"
       },
       {
-        "title": "Step 2",
+        "title": "Create a support bundle (easy)",
         "text": "step2.md"
       },
       {
-        "title": "Step 3",
+        "title": "Create a support bundle (hard)",
         "text": "step3.md"
+      },
+      {
+        "title": "Define a Desired Outcome with an Analyzer",
+        "text": "step4.md"
       }
     ],
     "intro": {
@@ -25,10 +29,14 @@
       "text": "finish.md"
     }
   },
+  "assets": { 
+      "client": [
+          {"file": "krew.sh", "target": "/root/", "chmod": "+x"}
+        ]},
   "environment": {
-    "uilayout": "editor-terminal"
+    "uilayout": "terminal"
   },
   "backend": {
-    "imageid": "kubernetes-cluster"
+    "imageid": "kubernetes-cluster-running:1.18"
   }
 }
