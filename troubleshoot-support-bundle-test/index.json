@@ -27,12 +27,13 @@
     },
     "finish": {
       "text": "finish.md"
-    }
+    },
+    "assets": { 
+        "client": [
+            {"file": "krew.sh", "target": "/root/", "chmod": "+x"}
+          ]
+      }
   },
-  "assets": { 
-      "client": [
-          {"file": "krew.sh", "target": "/root/", "chmod": "+x"}
-        ]},
   "environment": {
     "uilayout": "terminal"
   },
