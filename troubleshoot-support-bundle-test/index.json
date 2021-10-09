@@ -7,15 +7,18 @@
     "steps": [
       {
         "title": "Setup",
-        "text": "step1.md"
+        "text": "step1.md",
+        "courseData": "step1-background.sh"
       },
       {
         "title": "Create a support bundle",
-        "text": "step2.md"
+        "text": "step2.md",
+        "courseData": "step2-background.sh"
       },
       {
         "title": "Debug an Application",
-        "text": "step3.md"
+        "text": "step3.md",
+        "courseData": "step3-background.sh"
       },
       {
         "title": "Quick Troubleshooting with Analyzers",
