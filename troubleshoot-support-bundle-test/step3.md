@@ -16,9 +16,9 @@ metadata:
 spec:
   collectors: 
   - logs:
-    name: trouble app
-    selector:
-    - app=trouble
+      name: trouble app
+      selector:
+      - app=trouble
 </pre>
 
 Let's collect the bundle and extract it.
@@ -30,4 +30,5 @@ tar zxf support-bundle*.tar.gz -C support-bundle --strip-components=1
 
 If we review review XXX, we can see there are no replicas of this deployment running. 
 
-In the next step will dig deeper into this mystery and see if we can shrink the diagnostic loop using **Analyzers**.
+Although we have all the information we need in this bundle to figure out the issue, maybe we can do better.
+In the next step will dig deeper into this mystery and see if we can shorten the diagnostic loop using **Analyzers**.

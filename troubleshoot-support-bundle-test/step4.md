@@ -1,3 +1,2 @@
+Custom Analyzer for Node Labels
 
-
-Redactors are a thing
