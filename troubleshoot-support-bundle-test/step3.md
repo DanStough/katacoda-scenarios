@@ -16,7 +16,7 @@ metadata:
 spec:
   collectors: 
   - logs:
-      name: trouble app
+      name: trouble-app
       selector:
       - app=trouble
 </pre>
@@ -28,6 +28,9 @@ kubectl support-bundle trouble-1.yaml
 tar zxf support-bundle*.tar.gz -C support-bundle --strip-components=1
 ```{{execute}}
 
+Hmm, all the log files under `./support-bundle/trouble-app` are empty! 🤔
+
+Let's continuing digging in the other information we collected.
 Each path under `cluster-resources` corresponds to a `<resource>/namespace.json` for namespaced resources, or <resource>/.json for cluster-level resources.
 
 If we review review `./support-bundle/cluster-resources/deployments/trouble.json`{{open}} , we can see there are two unavailable replicas for application.

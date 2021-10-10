@@ -7,7 +7,7 @@ We also know that it's fine for a small cluster to only have one replica of this
 
 Let's define some some customer **Analyzers**. 
 One to check for the hardware prequisite, and another to check for the working deployment.
-in contrast to `preflight`, we can now check _the runtime behavior of our deployed app_.
+In contrast to `preflight`, we can now check _the runtime behavior of our deployed app_.
 
 <pre class="file" data-filename="trouble-2.yaml" data-target="replace">apiVersion: troubleshoot.sh/v1beta2
 kind: SupportBundle
@@ -24,8 +24,8 @@ spec:
       checkName: Cluster must have sooper GPU nodes to run the trouble app
       filters:
         selector:
-          matchLabels: 
-            trouble/capability=sooper-gpu
+          matchLabel: 
+            trouble/capability: sooper-gpu
       outcomes:
       - fail:
           when: "count() < 1"
@@ -55,9 +55,9 @@ We can see the interactive output now tells us in plain language that are app wo
 To fix this cluster, add the proper node label.
 ```bash
 kubectl label node node01 trouble/capability=sooper-gpu
-```{{execute}}.
+```{{execute}}
 
-If we wait a moment and re-run the support-bundle, now we can see our app is running as expected, albeit in a degraded mode because of a strict pod anti-affinity.
+If we wait a moment and re-run the support-bundle, now we can see our app is running as expected, even with only 1/2 replicas `Running`.
 ```bash
 kubectl support-bundle trouble-2.yaml
 ```{{execute}}

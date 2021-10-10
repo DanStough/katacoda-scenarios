@@ -39,7 +39,7 @@ spec:
                 - trouble
             topologyKey: "kubernetes.io/hostname"
       nodeSelector:
-        gpu: sooper-gpu
+        trouble/capability: sooper-gpu
       containers:
       - image: busybox
         name: trouble
@@ -49,5 +49,5 @@ spec:
         command:
         - "/bin/sh"
         - "-c"
-        - "echo Starting Trouble... && echo SOOPER_SECRET:$(SOOPER_SECRET) && echo TROUBLE ENGAGED && sleep 3600"
+        - "echo Starting Trouble... && echo Contacting API with SOOPER_SECRET:$SOOPER_SECRET && echo TROUBLE ENGAGED && sleep 3600"
 EOF
