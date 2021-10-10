@@ -3,6 +3,7 @@ Better yet, how can we let a support-engineer or IT admin know what the problem 
 
 Turns out a fancy machine-learning + blockchain app will only run on nodes with SOOPER-GPU™ hardware, and requires them to be labeled as such.
 This would explain why none of the pods can be scheduled.
+We also know that it's fine for a small cluster to only have one replica of this app running, so operators can ignore any other pending pods that might be waiting for a spare node.
 
 Let's define some some customer **Analyzers**. 
 One to check for the hardware prequisite, and another to check for the working deployment.
@@ -38,11 +39,8 @@ spec:
       - fail:
           when: "< 1"
           message: The Trouble deployment does not have any ready replicas.
-      - warn:
-          when: "= 1"
-          message: The Trouble deployment has only a single ready replica.
       - pass:
-          message: There are multiple replicas of the Trouble deployment ready.
+          message: At least one replica of the Trouble deployment is ready.
 </pre>
 
 With the app still broken, let's run the this spec.
