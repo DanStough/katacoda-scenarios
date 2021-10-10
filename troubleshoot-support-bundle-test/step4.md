@@ -12,7 +12,7 @@ In contrast to `preflight`, we can now check _the runtime behavior of our deploy
 <pre class="file" data-filename="trouble-2.yaml" data-target="replace">apiVersion: troubleshoot.sh/v1beta2
 kind: SupportBundle
 metadata:
-  name: supportbundle-tutorial
+  name: trouble-supportbundle
 spec:
   collectors: 
   - logs:
@@ -59,5 +59,23 @@ kubectl label node node01 trouble/capability=sooper-gpu
 
 If we wait a moment and re-run the support-bundle, now we can see our app is running as expected, even with only 1/2 replicas `Running`.
 ```bash
+rm -rf support-bundle-*
 kubectl support-bundle trouble-2.yaml
 ```{{execute}}
+
+If we extract those results, we've got one last problem. 
+```bash
+tar zxf support-bundle*.tar.gz -C support-bundle --strip-components=1
+```{{execute}}
+
+If we take a look at the logs for the running pod, one of the devs is echoing our API secret in the logs (see `./suppport-bundle/trouble-app/<pod id>.log`)!
+```
+...
+Contacting API with SOOPER_SECRET:cccccctteeeufbfeecdhrevfnrcbtgfcvikuhvvdllcj
+...
+```
+
+This is also a problem, because the secret is a literal in our pod spec for the deployment.
+`./support-bundle/pods/trouble.json`{{open}}
+
+While we're waiting for the dev team to fix the issue, let's make sure we don't leak this information again our final topic, **Redactors**.

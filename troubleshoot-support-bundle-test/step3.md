@@ -12,7 +12,7 @@ We can use the [Pod Logs Collector](https://troubleshoot.sh/docs/collect/logs/) 
 <pre class="file" data-filename="trouble-1.yaml" data-target="replace">apiVersion: troubleshoot.sh/v1beta2
 kind: SupportBundle
 metadata:
-  name: supportbundle-tutorial
+  name: trouble-supportbundle
 spec:
   collectors: 
   - logs:

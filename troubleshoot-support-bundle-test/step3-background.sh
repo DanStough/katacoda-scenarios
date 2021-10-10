@@ -46,8 +46,9 @@ spec:
         env:
         - name: SOOPER_SECRET
           value: cccccctteeeufbfeecdhrevfnrcbtgfcvikuhvvdllcj
-        command:
-        - "/bin/sh"
-        - "-c"
-        - "echo Starting Trouble... && echo Contacting API with SOOPER_SECRET:$SOOPER_SECRET && echo TROUBLE ENGAGED && sleep 3600"
+        command: 
+        - /bin/sh
+        - -c
+        args: 
+        - echo Starting Trouble... && echo Contacting API with SOOPER_SECRET:${SOOPER_SECRET} && echo TROUBLE ENGAGED && sleep 3600
 EOF
