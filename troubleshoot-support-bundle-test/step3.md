@@ -30,12 +30,14 @@ tar zxf support-bundle*.tar.gz -C support-bundle --strip-components=1
 
 Hmm, all the log files under `./support-bundle/trouble-app` are empty! 🤔
 
+**NOTE**: If you don't have a directory `./support-bundle/trouble-app`, yoru app deployment might have failed. Run `. install-trouble.sh` to re-install the application.
+
 Let's continuing digging in the other information we collected.
 Each path under `cluster-resources` corresponds to a `<resource>/namespace.json` for namespaced resources, or <resource>/.json for cluster-level resources.
 
-If we review review `./support-bundle/cluster-resources/deployments/trouble.json`{{open}} , we can see there are two unavailable replicas for application.
+If we review `./support-bundle/cluster-resources/deployments/trouble.json`{{open}} , we can see there are two unavailable replicas for the application.
 
 We can also see under `./support-bundle/cluster-resources/events/trouble.json`{{open}}, that these pods failed to schedule because no node matched the node selector in the deployment. 
 
-Although we have all the information we need in this bundle to figure out the issue, we can do better knowing our app requirements and its desired working state.
-In the next step will see if we catch this raise this error directly in the output using **Analyzers**.
+Although we have all the information we need in this bundle to figure out the issue, we can do better, knowing our app requirements and its desired working state.
+In the next step will see if we catch this error directly in the output using **Analyzers**.

@@ -39,7 +39,8 @@
     },
     "assets": { 
         "client": [
-            {"file": "krew.sh", "target": "/root/", "chmod": "+x"}
+            {"file": "krew.sh", "target": "/root/", "chmod": "+x"},
+            {"file": "install-trouble.sh", "target": "/root/", "chmod": "+x"}
           ]
       }
   },

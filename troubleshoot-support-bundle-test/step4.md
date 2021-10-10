@@ -1,7 +1,7 @@
-We still have a broken app, but how can we know if it's something we've seen before?
-Better yet, how can we let a support-engineer or IT admin know what the problem is without calling the developer?
+We still have a broken app, but how can we know if it's something we've seen before or expect?
+Better yet, how can we let a support-engineer or IT admin know what the problem is without calling a developer to interpret the output?
 
-Turns out a fancy machine-learning + blockchain app will only run on nodes with SOOPER-GPU™ hardware, and requires them to be labeled as such.
+Turns out a fancy edge + machine-learning + blockchain + quantum app will only run on nodes with SOOPER-GPU™ hardware, and requires them to be labeled as such.
 This would explain why none of the pods can be scheduled.
 We also know that it's fine for a small cluster to only have one replica of this app running, so operators can ignore any other pending pods that might be waiting for a spare node.
 
@@ -63,7 +63,7 @@ rm -rf support-bundle-*
 kubectl support-bundle trouble-2.yaml
 ```{{execute}}
 
-If we extract those results, we've got one last problem. 
+If we extract those results, we've got a new problem though... 
 ```bash
 tar zxf support-bundle*.tar.gz -C support-bundle --strip-components=1
 ```{{execute}}
@@ -76,6 +76,6 @@ Contacting API with SOOPER_SECRET:cccccctteeeufbfeecdhrevfnrcbtgfcvikuhvvdllcj
 ```
 
 This is also a problem, because the secret is a literal in our pod spec for the deployment.
-`./support-bundle/pods/trouble.json`{{open}}
+`./support-bundle/cluster-resources/pods/trouble.json`{{open}}
 
 While we're waiting for the dev team to fix the issue, let's make sure we don't leak this information again our final topic, **Redactors**.
