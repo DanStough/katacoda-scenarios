@@ -49,5 +49,5 @@ spec:
         command:
         - "/bin/sh"
         - "-c"
-        - "echo Starting Trouble... && echo SOOPER_SECRET:$(SOOPER_SECRET) && sleep 3600"
+        - "echo Starting Trouble... && echo SOOPER_SECRET:$(SOOPER_SECRET) && echo TROUBLE ENGAGED (ノ ゜Д゜)ノ ︵ ┻━┻ && sleep 3600"
 EOF

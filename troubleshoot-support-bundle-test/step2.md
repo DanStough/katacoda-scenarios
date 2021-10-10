@@ -12,7 +12,7 @@ spec:
   analyzers: []
 </pre>
 
-**NOTE**: Sometimes it takes a minute for VS Code to warm up. 
+**NOTE**: Sometimes it takes a minute for VS Code to warm up in the `IDE` tab. 
 If the file doesn't copy over, try again after a minute.
 
 We use **Collectors** to defined the information we will gather from the system (both the cluster and the host).
@@ -26,7 +26,7 @@ This generates an archive in the user's `$HOME` directory.
 We can expand this by running the follow (which will also remove the time-stamped directory) 
 `tar zxf support-bundle*.tar.gz -C support-bundle --strip-components=1`{{execute}}.
 
-If you visit the `support-bundle` folder in the IDE tab, you should see we have a mostly-full description of the state of our cluster and what's running in it, minus some potentially sensitive information.
+If you visit the `support-bundle` folder in the IDE tab, you should see we have a mostly-full description of the state of our cluster and what's running in it, minus some potentially sensitive information (we'll cover **Redactors** in future step).
 
 For example, which version of Kubernetes are we running? 
 `./support-bundle/cluster-info/cluster_version.json`{{open}} 
@@ -34,6 +34,7 @@ This file will tell us!
 
 Can you get this information from `kubectl`? 
 YES.
+
 Do you want to have the person on the other side of a Zoom run all the `kubectl` commands manually? 
 NOPE!
 
