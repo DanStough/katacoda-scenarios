@@ -2,6 +2,8 @@ Generating a support bundle requires you to specify the information you'd like t
 
 To get started, let's create a minimal `support-bundle` [spec](https://troubleshoot.sh/docs/support-bundle/collecting/):
 
+**NOTE**: Sometimes it takes a minute for VS Code to warm up in the `IDE` tab. 
+If the file doesn't copy over, try again after a minute.
 
 <pre class="file" data-filename="support.yaml" data-target="replace">apiVersion: troubleshoot.sh/v1beta2
 kind: SupportBundle
@@ -11,9 +13,6 @@ spec:
   collectors: []
   analyzers: []
 </pre>
-
-**NOTE**: Sometimes it takes a minute for VS Code to warm up in the `IDE` tab. 
-If the file doesn't copy over, try again after a minute.
 
 We use **Collectors** to defined the information we will gather from the system (both the cluster and the host).
 We **Analyzers** to determine the pass/warn/fail outcomes we expect as application and infrastructure maintainers.
